@@ -1,0 +1,26 @@
+@import "../styles";
+
+.container {
+  display: grid;
+  grid-template-rows: 8rem minmax(calc(100vh - 14rem), 1fr) 6rem;
+
+  @media only screen and (max-width: $bp-small) {
+    grid-template-rows: 14rem minmax(calc(100vh - 20rem), 1fr) 6rem;
+  }
+}
+
+.navigation {
+  display: grid;
+  height: 100%;
+  box-shadow: $box-shawdow-light;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-color {
+  background-color: #d2d2de;
+}

@@ -1,0 +1,76 @@
+<form class="form-support" [formGroup]="ticketForm" (ngSubmit)="onSubmit()">
+  <h3 class="mr-md">Tell us your issue, and we'll help you resolve it.</h3>
+  <div class="form-row">
+    <div class="side">
+      <div class="form-label-group">
+        <label>User id</label>
+        <input type="text" formControlName="userid" class="form-control" />
+      </div>
+      <div class="form-label-group">
+        <label>Name</label>
+        <input type="text" formControlName="name" class="form-control" />
+      </div>
+      <div class="form-label-group">
+        <label>Email Id</label>
+        <input type="text" formControlName="emailid" class="form-control" />
+      </div>
+    </div>
+    <div class="side">
+      <div class="form-label-group">
+        <label>Platform </label>
+        <select
+          formControlName="platform"
+          class="form-control"
+          class="drop-down"
+        >
+          <option value="Teradata">Teradata</option>
+          <option value="Hive">Hadoop Hive</option>
+          <option value="Spark">Spark</option>
+          <option value="Hbase">Hbase</option>
+          <option value="Cosmos">Cosmos</option>
+          <option value="SqlServer">Sql Server</option>
+        </select>
+      </div>
+      <div class="form-label-group">
+        <label>Category </label>
+        <select
+          formControlName="category"
+          class="form-control"
+          class="drop-down"
+        >
+          <option value="Teradata down">Teradata Down</option>
+          <option value="Hadoop Cluster down">Hadoop Ecosystem Down</option>
+          <option value="Space issue">Space issue in Teradata</option>
+          <option value="Unable to generate IRC reports">
+            Irc Report Generation Issue
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="form-label-group">
+        <label>Problem Description</label>
+        <textarea
+          type="text"
+          formControlName="problemDescription"
+          class="form-control"
+          rows="5"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+  <div class="form-label-group">
+    <label class="upload__label"> Upload Attachment</label>
+    <input
+      class="upload__file"
+      type="file"
+      #file
+      placeholder="choose file"
+      (change)="uploadFile(file.files)"
+    />
+  </div>
+
+  <div class="slide mr-tp-md">
+    <button type="submit" class="btn btn-cta mr-bt-sm">Raise Ticket</button>
+  </div>
+</form>

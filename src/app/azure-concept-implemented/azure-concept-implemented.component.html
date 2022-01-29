@@ -1,0 +1,75 @@
+<div class="mr-md">
+  <div class="front-end">
+    <span class="underline">Angular Static Web App Deployed</span>
+    <ul class="mr-lt-md">
+      <li>Created New Azure Static Web App</li>
+      <li>Created CI / CD Pipeline Using Github Actions and Azure</li>
+      <li>
+        Any changes commited to GitHub , Automatic build and deploy happens to
+        Azure using the YML file created.
+      </li>
+    </ul>
+  </div>
+  <div class="back-end">
+    <section class="mr-tp-md">
+      <span class="underline">Dotnet Core Application</span>
+      <ul class="mr-lt-md">
+        <li>Created New Dotnet Core Application</li>
+        <li>Deployed the separate API to Azure</li>
+        <li>
+          All the Connection String and App setting configured from the Azure
+          portal not in the VS.
+        </li>
+        <li>
+          Created Few API for fetching the data for the ticket raised and also
+          saving the ticket information in the Event Queue in the storage
+          account .
+        </li>
+      </ul>
+    </section>
+    <section class="mr-tp-md">
+      <span class="underline">Storage Account</span>
+      <ul class="mr-lt-md">
+        <li>
+          Created an Storage account with data storage for Container, Table and
+          Queue
+        </li>
+        <li>Create table called support in the table storage</li>
+        <li>
+          Create Event Queue called appqueue for the receiving the new tickets
+          with rentention of 7 days.
+        </li>
+        <li>
+          created an Blob container for storing the documents receiving from
+          frontend.
+        </li>
+      </ul>
+    </section>
+    <section class="mr-tp-md">
+      <span class="underline">Azure Function</span>
+      <ul class="mr-lt-md">
+        <li>
+          Created an Azure Function with HTTP trigger for getting the
+          Information of the User
+        </li>
+        <li>
+          Created another Azure Function with Event Trigger for pulling the
+          infromation from the Event queue in the storage account.
+        </li>
+        <li>
+          Deployed both the Azure Function in the Azure and all the CORS and the
+          Configuration like app setting are configured in the Azure Portal.
+        </li>
+        <li>
+          Created Azure SQL database and created table for HTTP trigger data
+          fetching.
+        </li>
+        <li>
+          Event Trigger constantly will look for the incoming request and send
+          the processed information to the Storage Account Table. created before
+          called Tickets.
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>

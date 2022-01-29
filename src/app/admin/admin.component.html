@@ -1,0 +1,22 @@
+<div *ngIf="userData$ | async">
+  <table id="table-contact" class="mr-md">
+    <tr>
+      <th>User Id</th>
+      <th>Category</th>
+      <th>Platform</th>
+      <th>Problem Description</th>
+      <th>Attachment</th>
+    </tr>
+    <tr *ngFor="let user of userData$ | async">
+      <td>{{ user.userid }}</td>
+      <td>{{ user.category }}</td>
+      <td>{{ user.platform }}</td>
+      <td>{{ user.problemDescription }}</td>
+      <td (click)="onDownload(user)">
+        <svg>
+          <use xlink:href="assets/svg/sprite.svg#icon-pencil"></use>
+        </svg>
+      </td>
+    </tr>
+  </table>
+</div>

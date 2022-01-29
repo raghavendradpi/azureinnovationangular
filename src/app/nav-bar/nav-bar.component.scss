@@ -1,0 +1,70 @@
+@import "../../styles";
+
+// Navigation Header
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  z-index: $z-index-xlg;
+  background-color: $color-white;
+  color: $color-text-gray-80;
+  font-weight: 700;
+  width: 100vw;
+  position: fixed;
+  margin-top: 2rem;
+
+  // Navigation List
+  &__list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: $small-font-size;
+    letter-spacing: 1px;
+    min-width: 40%;
+
+    @media only screen and (max-width: $bp-small) {
+      order: 3;
+      flex-wrap: wrap;
+      padding: 0 0.5rem;
+    }
+  }
+
+  // Navigation Individual items
+  &__item {
+    padding: 0 1.5rem;
+    transition: transform 0.3s;
+
+    &:hover,
+    &:active {
+      transform: scale(1.1);
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      background-color: map-get($color-primary, dark);
+      width: 0%;
+      height: 4px;
+      transition: width 0.2s 0.3s;
+      margin-top: 1rem;
+    }
+
+    &:not(.router-active):hover::after {
+      width: 100%;
+    }
+  }
+
+  // Navigation Items Link
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+  }
+}
+
+.router-active {
+  background-color: $color-bg-gray-30;
+}
