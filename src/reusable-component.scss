@@ -203,10 +203,7 @@ label {
   color: $color-white;
 }
 
-#table-contact tr th:first-of-type,
-#table-contact tr td:first-of-type {
-  display: none;
-}
+ 
 
 @media only screen and (max-width: $bp-small) {
   #table-contact tr th:nth-child(4),
