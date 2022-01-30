@@ -7,8 +7,8 @@ $color-primary: (
 );
 
 //SVG
-$svg-filter-theme: invert(66%) sepia(21%) saturate(2510%) hue-rotate(356deg)
-  brightness(100%) contrast(110%);
+$svg-filter-theme: invert(42%) sepia(99%) saturate(733%) hue-rotate(157deg)
+  brightness(96%) contrast(101%);
 $svg-filter-green: invert(59%) sepia(17%) saturate(1206%) hue-rotate(77deg)
   brightness(101%) contrast(99%);
 $svg-filter-gray: invert(16%) sepia(15%) saturate(35%) hue-rotate(314deg)
@@ -19,7 +19,7 @@ $svg-filter-white: invert(95%) sepia(0%) saturate(20%) hue-rotate(320deg)
 // accent
 $color-accent-red: #0a031e;
 $color-accent-green: #51b960;
-$color-accent-yellow: #7bf433;
+$color-accent-yellow: #007fff;
 
 //text
 $color-text-gray-100: rgba(0, 0, 0, 0.95);
@@ -93,6 +93,7 @@ $bp-smallest: 450px;
   padding: 1.5rem;
   background-color: $color-accent-yellow;
   color: $color-text-gray-80;
+  color: $color-white;
   font-weight: 600;
   align-self: flex-end;
   flex: 1;
