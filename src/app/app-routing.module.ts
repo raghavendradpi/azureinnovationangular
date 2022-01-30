@@ -30,7 +30,7 @@ const routes: Routes = [
       title: 'Fetch the Ticket Data',
     },
   },
-  { path: '', pathMatch: 'full', redirectTo: 'support' },
+  { path: '', pathMatch: 'full', redirectTo: 'azure-implemented' },
   { path: '**', component: SupportTicketComponent },
 ];
 
