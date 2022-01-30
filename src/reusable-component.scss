@@ -112,7 +112,7 @@ $bp-smallest: 450px;
 
   .arrow-submit {
     margin-left: 1rem;
-    @include svg($svg-filter-gray, 1.5rem);
+    @include svg($svg-filter-theme, 1.5rem);
   }
 }
 
