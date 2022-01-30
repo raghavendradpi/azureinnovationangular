@@ -9,7 +9,6 @@ $color-primary: (
 //SVG
 $svg-filter-theme: invert(42%) sepia(99%) saturate(733%) hue-rotate(157deg)
   brightness(96%) contrast(101%);
- 
 
 // accent
 $color-accent-red: #0a031e;
@@ -190,7 +189,7 @@ label {
 
 #table-contact td {
   padding: 8px;
-  border: 1px solid $color-text-gray-60;
+  border: 1px solid $color-accent-yellow;
 }
 
 #table-contact tr:hover,
@@ -224,7 +223,6 @@ label {
 svg {
   @include svg($svg-filter-theme);
 }
- 
 
 ///Grid Reusable compoenent
 
@@ -242,8 +240,7 @@ svg {
   grid-column: 1/-1;
 }
 
- 
- .underline {
+.underline {
   border-bottom: 1px solid blue;
   color: blue;
 }
